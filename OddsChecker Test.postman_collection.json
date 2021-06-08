@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "f2dbc7b3-3127-4c15-b33c-0034b55851ab",
+		"name": "OddsChecker Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Bet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bets",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Odds",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"betId\": 1,\n    \"userId\": \"6ca7e73a-c7ba-11eb-b8bc-0242ac130003\",\n    \"odds\": \"2/3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/odds",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Odds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/odds/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odds",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
